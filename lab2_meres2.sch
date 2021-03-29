@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:C C1
-U 1 1 60228247
-P 2150 1500
-F 0 "C1" V 1898 1500 50  0000 C CNN
-F 1 "470n" V 1989 1500 50  0000 C CNN
-F 2 "" H 2188 1350 50  0001 C CNN
-F 3 "~" H 2150 1500 50  0001 C CNN
-	1    2150 1500
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 60228912
 P 2650 1500
@@ -32,6 +21,9 @@ F 0 "R1" V 2443 1500 50  0000 C CNN
 F 1 "4.7k" V 2534 1500 50  0000 C CNN
 F 2 "" V 2580 1500 50  0001 C CNN
 F 3 "~" H 2650 1500 50  0001 C CNN
+F 4 "R" H 2650 1500 50  0001 C CNN "Spice_Primitive"
+F 5 "4.7k" H 2650 1500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2650 1500 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2650 1500
 	0    1    1    0   
 $EndComp
@@ -43,35 +35,14 @@ F 0 "R3" V 4043 1500 50  0000 C CNN
 F 1 "47k" V 4134 1500 50  0000 C CNN
 F 2 "" V 4180 1500 50  0001 C CNN
 F 3 "~" H 4250 1500 50  0001 C CNN
+F 4 "R" H 4250 1500 50  0001 C CNN "Spice_Primitive"
+F 5 "47k" H 4250 1500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4250 1500 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4250 1500
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R R2
-U 1 1 60229439
-P 3500 2650
-F 0 "R2" H 3430 2604 50  0000 R CNN
-F 1 "1k" H 3430 2695 50  0000 R CNN
-F 2 "" V 3430 2650 50  0001 C CNN
-F 3 "~" H 3500 2650 50  0001 C CNN
-	1    3500 2650
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 602298B6
-P 4800 2500
-F 0 "R4" H 4730 2454 50  0000 R CNN
-F 1 "100k" H 4730 2545 50  0000 R CNN
-F 2 "" V 4730 2500 50  0001 C CNN
-F 3 "~" H 4800 2500 50  0001 C CNN
-	1    4800 2500
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	2800 1500 3650 1500
-Wire Wire Line
-	3500 2500 3500 1950
 Wire Wire Line
 	3500 1950 3850 1950
 Wire Wire Line
@@ -81,8 +52,6 @@ Wire Wire Line
 Connection ~ 3650 1500
 Wire Wire Line
 	3650 1500 4100 1500
-Wire Wire Line
-	2300 1500 2500 1500
 Wire Wire Line
 	4800 2050 4800 1500
 Connection ~ 4800 2050
@@ -101,8 +70,6 @@ F 3 "" H 3500 3300 50  0001 C CNN
 	1    3500 3300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3500 2800 3500 3000
 Connection ~ 3500 3000
 Wire Wire Line
 	3500 3000 3500 3300
@@ -140,14 +107,15 @@ F 0 "J1" H 6128 976 50  0000 L CNN
 F 1 "Conn_01x05_Female" H 6128 885 50  0000 L CNN
 F 2 "" H 6100 950 50  0001 C CNN
 F 3 "~" H 6100 950 50  0001 C CNN
+F 4 "J" H 6100 950 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x05_Female" H 6100 950 50  0001 C CNN "Spice_Model"
+F 6 "N" H 6100 950 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6100 950 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1600 1500 1600 1150
 Connection ~ 1600 1500
-Wire Wire Line
-	1600 1500 2000 1500
 Wire Wire Line
 	4050 750  4050 1750
 Wire Wire Line
@@ -220,7 +188,7 @@ F 1 "VSOURCE" H 6628 2405 50  0000 L CNN
 F 2 "" H 6400 2450 50  0001 C CNN
 F 3 "~" H 6400 2450 50  0001 C CNN
 F 4 "V" H 6400 2450 50  0001 C CNN "Spice_Primitive"
-F 5 "dc 15" H 6400 2450 50  0001 C CNN "Spice_Model"
+F 5 "dc 10" H 6400 2450 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 6400 2450 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6400 2450
 	1    0    0    -1  
@@ -234,7 +202,7 @@ F 1 "VSOURCE" H 6628 1605 50  0000 L CNN
 F 2 "" H 6400 1650 50  0001 C CNN
 F 3 "~" H 6400 1650 50  0001 C CNN
 F 4 "V" H 6400 1650 50  0001 C CNN "Spice_Primitive"
-F 5 "dc 15" H 6400 1650 50  0001 C CNN "Spice_Model"
+F 5 "dc 10" H 6400 1650 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 6400 1650 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6400 1650
 	1    0    0    -1  
@@ -267,11 +235,32 @@ F 0 "U?" H 4494 2096 50  0000 L CNN
 F 1 "OPAMP" H 4494 2005 50  0000 L CNN
 F 2 "" H 4150 2050 50  0001 C CNN
 F 3 "~" H 4150 2050 50  0001 C CNN
-F 4 "R" H 4150 2050 50  0001 C CNN "Spice_Primitive"
-F 5 "0" H 4150 2050 50  0001 C CNN "Spice_Model"
+F 4 "X" H 4150 2050 50  0001 C CNN "Spice_Primitive"
+F 5 "TL082" H 4150 2050 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4150 2050 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "adtl082_for_the_win.lib" H 4150 2050 50  0001 C CNN "Spice_Lib_File"
+F 7 "TL082.lib" H 4150 2050 50  0001 C CNN "Spice_Lib_File"
+F 8 "1 2 4 5 3" H 4150 2050 50  0001 C CNN "Spice_Node_Sequence"
 	1    4150 2050
 	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1950 3500 3000
+Wire Wire Line
+	2300 1500 2500 1500
+Wire Wire Line
+	2000 1500 1600 1500
+$Comp
+L Device:C C1
+U 1 1 6063BF78
+P 2150 1500
+F 0 "C1" V 1898 1500 50  0000 C CNN
+F 1 "470n" V 1989 1500 50  0000 C CNN
+F 2 "" H 2188 1350 50  0001 C CNN
+F 3 "~" H 2150 1500 50  0001 C CNN
+F 4 "C" H 2150 1500 50  0001 C CNN "Spice_Primitive"
+F 5 "470n" H 2150 1500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2150 1500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2150 1500
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC

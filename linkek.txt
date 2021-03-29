@@ -1,0 +1,2 @@
+KiCAD OpAmp szimuláció
+http://ngspice.sourceforge.net/ngspice-eeschema.html#OpAmp
